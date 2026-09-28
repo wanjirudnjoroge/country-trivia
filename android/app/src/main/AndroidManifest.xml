@@ -1,4 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Required in release builds to load country flags from flagcdn.com.
+         The debug and profile manifests already declare this, so without it
+         flags would only work in debug. -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:label="country_trivia"
         android:name="${applicationName}"

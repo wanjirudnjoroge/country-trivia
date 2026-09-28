@@ -6,6 +6,7 @@ import 'core/app_theme.dart';
 import 'data/country_repository.dart';
 import 'screens/quiz_screen.dart';
 import 'viewmodels/quiz_view_model.dart';
+  import 'screens/results_screen.dart';
 
 /// Root widget: dependency graph, Material 3 theming and routing.
 ///
@@ -35,6 +36,7 @@ class CountryTriviaApp extends StatelessWidget {
         initialRoute: AppRoutes.quiz,
         routes: <String, WidgetBuilder>{
           AppRoutes.quiz: (_) => const QuizScreen(),
+          AppRoutes.results: (_) => const ResultsScreen(),
         },
       ),
     );
